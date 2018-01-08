@@ -1,0 +1,102 @@
+obtained pbdb_data.conidae.txt from paleobiological database. did a search for 'Conidae'
+
+
+python prepare.for.pyrate.py
+
+requires:
+
+1. pbdb_data.conidae.txt
+
+creates:
+
+1. pyrate.input.v1
+
+
+filter requirements:
+
+1. kept only occurrneces identified at the species level
+
+prints out all unique genera -- this is important due to recent taxonomic changes -- you must check if they are still in Conidae via WORMS
+##########################################
+
+'Conilithes' - Conidae
+'Conorbis'
+'Californiconus' - Conidae
+'Glyptotoma'
+'Conasprella' - Conidae
+'Conasprelloides' - Conidae -- change this to Conus
+'Propebela'
+'Purpuriconus' - Conidae -- change this to Conus
+'Profundiconus' - Conidae 
+'Curtitoma'
+'Moniliopsis'
+'Conus' - Conidae
+'Lithoconus' - Conidae -- change this to Conus
+'Cryptoconus' 
+'Parviconus' - Conidae -- change this to Conasprella
+'Marshallaria'
+'Oenopota'
+'Conospirus' - Conidae -- change this to Conilithes
+
+##########################################
+
+python prepare.for.pyrate.p2.py
+
+requires:
+
+1. pyrate.input.v1
+
+creates:
+
+1. pyrate.input.v2
+
+
+also prints out species names found in multiple genera. removes genera that are not part of the Conidae family
+
+###################################
+
+python prepare.for.pyrate.p3.py
+
+requires:
+
+1. pyrate.input.v2
+
+creates:
+
+1. pyrate.input.v3
+
+changes unaccepted genera names via worms to accepted genera names.
+
+#################################
+
+python prepare.for.pyrate.p4.py
+
+requires:
+
+1. pyrate.input.v3
+
+creates:
+
+1. pyrate.input.v4
+
+checks worms database for extinct/extant. if name is present in worms, you call it extant because the searches are only for extant species
+if the name is there, but is unaccepted, you call it extinct
+
+the species name has to match the species name in the database in order to be called extant. species name also has to be accepted
+
+##############################
+
+python prepare.for.pyrate.p5.py
+
+requires:
+
+1. pyrate.input.v4
+
+creates:
+
+1. pyrate.input.v5
+
+revoked the unaccepted condition to be considered extant. all species names found in the database are considered extant.
+
+largillierti is spelled wrong, so called all instances of this extant.
+

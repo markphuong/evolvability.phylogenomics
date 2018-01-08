@@ -1,0 +1,11 @@
+blastn -query conus.baits.2017.final.renamed.fa -db 33.33_loci_v2.fa -outfmt 6 -out 33.33.blastoutput -evalue 1e-10 -word_size 11
+blastn -query conus.baits.2017.final.renamed.fa -db 36.36_loci_v2.fa -outfmt 6 -out 36.36.blastoutput -evalue 1e-10 -word_size 11
+
+format.files.36.36.py
+format.files.33.33.py
+
+
+only blasted from reference to these loci
+
+removed sample loci if found blasted to multiple references
+checked over no overlap for multiple unique sequences blasting to same refseq. 

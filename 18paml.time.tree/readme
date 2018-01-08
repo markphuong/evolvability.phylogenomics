@@ -1,0 +1,19 @@
+################## filter intraspecific lineages
+
+python grab.dropped.taxa.py
+
+creates: 
+1. mydroppedtaxa
+
+
+export PATH=~/anaconda_ete/bin:$PATH ##type this so the ete3 module works
+
+###################### prune tree in R
+
+droptip.r
+
+
+#################### add fossil calibrations and print out nexus file
+
+
+add.fossil.calibrations.py

@@ -1,0 +1,2 @@
+cp ../nico.exon.cap/*v2.fa ./
+cp ../helena.rnaseq/9filter/*v2.fa ./

@@ -1,0 +1,4 @@
+cp ../7exonboundaries/mynewbed ./
+
+python make_new_reference.py
+python rename.loci.py

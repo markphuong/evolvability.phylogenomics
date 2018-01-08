@@ -1,0 +1,3 @@
+cp ../8makenewref/conus.baits.2017.final.renamed.fa ./
+sbatch blastBatch
+
